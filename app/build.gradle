@@ -61,6 +61,9 @@ android {
 
         vectorDrawables.generatedDensities = []
 
+        buildConfigField "String", "API_BASE_URL", "\"https://example.com\""
+        buildConfigField "String", "API_KEY", "\"dev-key\""
+
     }
 
     sourceSets {
@@ -186,6 +189,11 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
     implementation "androidx.work:work-runtime-ktx:$workVer"
+
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.12.0"
+    implementation "com.squareup.retrofit2:retrofit:2.11.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.11.0"
 
     implementation "androidx.room:room-runtime:$roomVer"
     implementation "androidx.room:room-ktx:$roomVer"
