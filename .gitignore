@@ -9,3 +9,8 @@
 .externalNativeBuild
 /benchmark
 *.png
+# Server artifacts
+/server/.env
+/server/storage/
+/server/.venv/
+__pycache__/
