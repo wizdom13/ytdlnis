@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ytdlnis-server"
+version = "0.1.0"
+description = "Backend services for the YTDLnis client-server refactor"
+readme = "README.md"
+authors = [
+  { name = "YTDLnis Team" }
+]
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.23.0",
+  "celery[redis]>=5.3.6",
+  "redis>=5.0.0",
+  "pydantic>=2.6.0",
+  "pydantic-settings>=2.0.0",
+  "python-dotenv>=1.0.0",
+  "slowapi>=0.1.8",
+  "yt-dlp>=2024.11.4",
+  "sse-starlette>=2.0.0",
+  "aiofiles>=23.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "httpx"
+]
